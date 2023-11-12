@@ -1,0 +1,22 @@
+cloud:
+  aws:
+    credentials:
+      access-key: ${ ACCESS_KEY }
+      secret-key: ${ SECRET_KEY}
+    region:
+      static: ${REGION}
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: spring.boot.bucket
+
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 5MB
+      max-request-size: 10MB
